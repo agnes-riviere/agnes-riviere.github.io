@@ -13,17 +13,17 @@
     padding-left: 20px;
 }
 .navbar a {
-    font-size: 1.8em;
-    line-height: 0.9em;
+    font-size: 1.2em;
+    line-height: 1em;
     padding: 8px;
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
-    color: #878a78;
+    color: #708a8f;
 }
 
 .navbar a:hover {
-    background-color: #e1eac0;
+    background-color: #c3c2c2;
 }
 
 html,
@@ -43,8 +43,8 @@ body {
     background-color: #dcdcdc;
 }
 p{
-    font-size: 1.2em; 
-    max-width: 550px;
+    font-size: 1.2em;   
+    max-width: 720px;
     margin: auto;
     margin-bottom: 40px;
     color: #56585e;
@@ -56,28 +56,24 @@ header{
 }
 
 header h1{
-    font-size: 8em;
-    color: #878a78;
+    font-size: 6em;
+    color: #7e97a0;
+    text-align: center;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-    color: #878a78;
-    font-size: 3em; 
-    line-height: 0.4;
+    color: #8aa9ae;
+    font-size: 2.5em;   
+    line-height: 1em;
     font-weight: normal;
 }
 h4{
     font-size: 2em; 
 }
 
-a,
-a:link {
-    color: inherit;
-    opacity: 0.85
-}
 
 a:hover,
 a:focus,
@@ -89,30 +85,24 @@ a:active {
 
 ul,
 ol {
-    display: inline-block;
-    max-width: 50%;
-    max-width: none;
+    display: inherit;
 }
 
 section,
 footer {
     position: relative;
-    width: 50%;
+    width: 60%;
     background-color: white;
     vertical-align: middle;
     margin: 1em auto 1em auto;  
-    padding: 1em 1em 2em 1em;
+    padding: 1em 3em 2em 3em;
     z-index: 1;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-footer{
-    font-size: 0.7em;
-    padding: 1em;
-}
 footer p{
-    margin: 10px auto 10px auto;
+    font-size: 1em;
+    margin: 0 auto;
 }
-
 
 @media screen {
 
