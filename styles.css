@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swaphttps://fonts.googleapis.com/css2?family=Quicksand&display=swap); 
+
+
+.navbar {
+    position: fixed;
+    left: 0px; /* Initial position outside the viewport */
+    top: 50%;
+    transform: translateY(-25%);
+    height: 100%;
+    width: 200px;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+    text-align: left;
+    padding-left: 20px;
+}
+.navbar a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.8em;
+    line-height: 0.9em;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    color: #878a78;
+}
+
+.navbar a:hover {
+    background-color: #e1eac0;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    scroll-behavior: smooth; /* Smooth scrolling enchor links */
+}
+
+.page {
+    position: absolute;
+    width: 100%; min-height: 100%;
+    line-height: normal;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #131313;
+    background-color: #c8cdf6;
+}
+p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em; 
+    max-width: 550px;
+    margin: auto;
+    margin-bottom: 40px;
+    color: #56585e;
+}
+
+header{
+    background-color: #c8dcf6;
+    padding: 1em;
+}
+
+header h1{
+    font-size: 8em;
+    color: #878a78;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #878a78;
+    font-size: 3em; 
+    line-height: 0.4;
+    font-weight: normal;
+    font-family: 'Source Sans 3', sans-serif;
+}
+h4{
+    font-size: 2em; 
+}
+
+a,
+a:link {
+    color: inherit;
+    opacity: 0.85
+}
+
+a:hover,
+a:focus,
+a:active {    
+    text-decoration: none;
+    opacity: 1
+}
+
+.custiframe{
+
+}
+
+.expandable {
+    height: 100px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+.expanded {
+    height: 100%; /* Set the initial height when expanded */
+}
+
+ul,
+ol {
+    display: inline-block;
+    text-align: left;
+    max-width: 50%;
+    max-width: none;
+}
+
+section,
+footer {
+    position: relative;
+    width: 50%;
+    background-color: white;
+    vertical-align: middle;
+    margin: 1em auto 1em auto;  
+    padding: 1em 1em 2em 1em;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+footer{
+    font-size: 0.7em;
+    padding: 1em;
+}
+footer p{
+    margin: 10px auto 10px auto;
+}
+
+@media screen {
+
+}
+@media screen and (min-width: 1200px) {
+    
+}
+
+@media screen and (min-width: 641px) and (max-width: 1199px),
+(min-height:500px) and (max-height: 1199px) {
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+    .navbar {
+        display: none;
+    }
+}

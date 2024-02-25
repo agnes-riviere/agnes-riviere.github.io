@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenue sur test web git</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+
+        <div class="container">
+
+    <div class="navbar" id="navbar">
+        <a href="#section1">- Section 1</a>
+        <a href="#section2">- Section 2</a>
+        <a href="#section3">- Section 3</a>
+        <a href="#section4">- Section 4</a>
+        <a href="#contacts">- Contacts</a>
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById('navbar');
+            if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
+                navbar.style.left = '0';
+            } else {
+                navbar.style.left = '-200px';
+            }
+        };
+    </script>
+            <header>
+                <h1>Test web git</h1>
+            </header>
+            <section id="section1">
+                <h2>Section 1 !</h2>
+                <p>CLorem ipsum sit dolor amet.CLorem ipsum sit dolor amet.CLorem ipsum sit dolor amet.
+                </p>
+            </section>
+            <section id="section2">
+                <h2>Section 2</h2>
+                <p>CLorem ipsum sit dolor amet.
+                </p>
+            </section>
+            <section id="section3">
+                <h2>Section 3</h2>
+                    
+                    <!-- <div id="expandableElement" class="expandable"> -->
+                        <h4>Subtitle_4 A</h4>
+                        <p>Pour rejoindre cet endroit en vélo, suivez la piste cyclable qui longe la rivière. Vous trouverez des stations de vélos en libre-service à proximité si vous n'avez pas votre propre vélo.</p>
+                     <!-- </div> -->
+
+                     <!-- <div id="expandableElement" class="expandable"> -->
+                        <h4>Subtitle_4 B</h4>
+                        <p>La gare la plus proche est à seulement 10 minutes à pied. Prenez le train en direction de la ville et descendez à la gare centrale. De là, suivez les indications pour rejoindre le lieu en marchant.</p>
+                     <!-- </div> -->
+            </section>
+            <section id="section4">
+                <h2>Section 4</h2>
+                <p>Nous avons rassemblé plusieurs solutions d'hébergement pour faciliter votre choix et votre séjour dans le Pays d'Auge.</p>
+                        
+                <iframe id="myMapsIframe" class="custiframe"
+                    width="100%"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/d/embed?mid=10tQULxyz">
+                </iframe>
+            </section>
+            <section id="contacts">
+                <h2>Contacts</h2>
+                Contact us at <a href="mailto:mail@aexample.com">mail@aexample.com</a>
+            </section>
+            <footer>
+                <p>Vanilla HTML website</p>
+                <p>Police de caractère Xx, hébergé par XxFonts</p>
+            </footer>
+        </div>
+    </div>
+
+</body></html>
