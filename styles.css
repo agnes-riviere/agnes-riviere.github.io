@@ -93,7 +93,7 @@ ol {
     display: inherit;
 }
 li{  
-    line-height: 2.0em;
+    line-height: 1.5em;
     margin: auto;
     padding-bottom: 1.2em;
 }
@@ -108,7 +108,7 @@ li{
 .socials_block img {
     width: 64px; /* Sets the width of the images to 64 pixels */
     margin-left: 10px; /* Provides spacing between the images */
-    margin-top: 16px;
+    margin-top: 22px;
 }
 
 .socials_block a:hover {
