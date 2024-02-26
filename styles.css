@@ -98,14 +98,31 @@ li{
     padding-bottom: 1.2em;
 }
 
+.socials_block {
+    float: right;
+    /*text-align: right; /* Aligns the content to the right within its parent */
+}
+.intro_h2 {
+    display: inline-block;
+}
+.socials_block img {
+    width: 64px; /* Sets the width of the images to 64 pixels */
+    margin-left: 10px; /* Provides spacing between the images */
+    margin-top: 16px;
+}
+
+.socials_block a:hover {
+    opacity: 0.85;
+}
+
 section,
 footer {
     position: relative;
     width: 60%;
     background-color: white;
     vertical-align: middle;
-    margin: 1em auto 1em auto;  
-    padding: 1em 3em 2em 3em;
+    margin: 1em auto 1em auto;    
+    padding: 1em 3em 1em 3em;
     z-index: 1;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
