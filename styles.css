@@ -43,8 +43,8 @@ body {
     background-color: #dcdcdc;
 }
 p{
-    font-size: 1.2em;   
-    max-width: 720px;
+    font-size: 18px;   
+    max-width: 800px;
     margin: auto;
     margin-bottom: 40px;
     color: #56585e;
@@ -60,37 +60,51 @@ header h1{
     color: #7e97a0;
     text-align: center;
 }
-h1,
+
 h2,
 h3,
 h4{
+    
     color: #8aa9ae;
-    font-size: 2.5em;   
     line-height: 1em;
     font-weight: normal;
 }
+h2{
+    font-size: 48px; 
+}
+h3{
+    font-size: 32px; 
+}
 h4{
-    font-size: 2em; 
+    font-size: 24px; 
 }
 h5{
-    display: inline-block;
     font-size: 1em;
-    margin: 0;
     font-weight: bolder;
+    color: #8aa9ae;
+    max-width: 800px;  
+    margin: 0 auto 10px auto;
 }
 
 
 a:hover,
 a:focus,
-a:active {    
+a:active,
+a:visited {    
     text-decoration: none;
-    opacity: 1
+    color: #708a8f;
+    opacity: 0.8;
 }
+
+
 
 
 ul,
 ol {
     display: inherit;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
 }
 li{  
     line-height: 1.5em;
@@ -113,6 +127,14 @@ li{
 
 .socials_block a:hover {
     opacity: 0.85;
+}
+
+.figure{  
+    max-width: 800px;
+    margin: auto;
+}
+.figure img, .figure video{
+    width: 100%;
 }
 
 section,
