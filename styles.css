@@ -136,7 +136,15 @@ li{
 .figure img, .figure video{
     width: 100%;
 }
-
+.figure_center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+.figure_center img{
+    vertical-align: middle;
+}
 section,
 footer {
     position: relative;

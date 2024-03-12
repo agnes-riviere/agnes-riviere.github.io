@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
+import numpy as np
 # Your DataFrame
 data = {
     'Year': [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
@@ -31,7 +32,9 @@ df['Year'] = df['Year'].astype(str) + '-' + (df['Year'] + 1).astype(str)
 
 # Display the DataFrame
 print(df)
-
+# Calculate the mean of Teaching Hours
+mean_teaching_hours = np.mean(df['Teaching Hours'])
+print(mean_teaching_hours)
 
 # Plotting
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -40,24 +43,27 @@ plt.bar(df['Year'], df['Teaching Hours'], color='cadetblue')
 # Adding event markers
 for index, row in df.iterrows():
     if row['Event'] == 'Maternity Leave':
-        plt.text(row['Year'], row['Teaching Hours'] + 10, 'Maternity Leave', ha='center', va='bottom', rotation=90)
+        ax.text(row['Year'], row['Teaching Hours'] + 10, 'Maternity Leave', ha='center', va='bottom', rotation=90, fontsize=12)
     if row['Event'] == 'Postdoc':
-        plt.text(row['Year'], row['Teaching Hours'] + 10, 'Postdoc', ha='center', va='bottom', rotation=90)
+        ax.text(row['Year'], row['Teaching Hours'] + 10, 'Postdoc', ha='center', va='bottom', rotation=90, fontsize=12)
     if row['Event'] == 'New position':
-        plt.text(row['Year'], row['Teaching Hours'] + 10, 'New position', ha='center', va='bottom', rotation=90)
+        ax.text(row['Year'], row['Teaching Hours'] + 10, 'New position', ha='center', va='bottom', rotation=90, fontsize=12)
 # Update x-axis labels with the 'Year' column
-plt.xticks(range(len(df)), df['Year'], rotation=90, ha='center')  # Setting rotation to 0 and ha to 'center'
+# Rotate all x-axis labels
+ax.set_xticks(range(len(df)))
+ax.set_xticklabels(df['Year'], rotation=45, ha='right', fontsize=12)  # Adjust fontsize
+ax.tick_params(axis='y', labelsize=12)
 
-plt.xlabel('Year', rotation=0, ha='center')  # Setting rotation to 0 and ha to 'center'
-plt.ylabel('Teaching Hours without the coordination time')
+ax.set_xlabel('Year', fontsize=14)  #  Setting rotation to 0 and ha to 'center'
+ax.set_ylabel('Teaching Hours without the coordination time', fontsize=14)  #
 # Adjust space at the top and bottom
-plt.subplots_adjust(top=0.99, bottom=0.2,right=0.99,left=0.08)
+plt.subplots_adjust(top=0.99, bottom=0.2, right=0.99, left=0.08)
 # Save the figure as a PNG file
 
 # Specify the directory to save the image
 img_directory = 'img'
 os.makedirs(img_directory, exist_ok=True)
 
-plt.savefig(os.path.join(img_directory, 'teaching_hours_figure.png'))
+plt.savefig(os.path.join(img_directory, 'teaching_hours.png'))
 
 plt.show()
