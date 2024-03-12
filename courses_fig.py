@@ -57,6 +57,7 @@ plt.subplots_adjust(top=0.99, bottom=0.2,right=0.99,left=0.08)
 # Specify the directory to save the image
 img_directory = 'img'
 os.makedirs(img_directory, exist_ok=True)
-plt.savefig(os.path.join(img_directory,'teaching_hours.png'))
+
+plt.savefig(os.path.join(img_directory, 'teaching_hours_figure.png'))
 
 plt.show()
