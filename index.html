@@ -14,36 +14,41 @@
 
         <div class="container">
 
-    <div class="navbar" id="navbar">
-        <a href="#section1">- Agnes Riviere, Ph.D. </a>
-        <a href="#section2">- News</a>
-        <a href="#section3">- Research Projects</a>
-        <a href="#section4">- Publications, Reports and Conferences</a>
-        <a href="#section5">- Software</a>
-        <a href="#section6">- Equipments and field works </a>
-        <a href="#section7">- Scientific responsibilities </a>
-        <a href="#section8">-Supervision </a>
-        <a href="#section9">- Teaching experiences </a>
-        <a href="#section10">- Dissemination to broader audience</a>
-        <a href="#section11">- CV</a>
-        <a href="#contacts">- Contacts</a>
-    </div>
+        <div class="navbar" id="navbar">
+            <a href="#section1">- Agnes Riviere, Ph.D. </a>
+            <a href="#section2">- News</a>
+            <a href="#section3">- Research Projects</a>
+            <a href="#section4">- Publications, Reports and Conferences</a>
+            <a href="#section5">- Software</a>
+            <a href="#section6">- Equipments and field works </a>
+            <a href="#section7">- Scientific responsibilities </a>
+            <a href="#section8">-Supervision </a>
+            <a href="#section9">- Teaching experiences </a>
+            <a href="#section10">- Dissemination to broader audience</a>
+            <a href="#section11">- CV</a>
+            <a href="#contacts">- Contacts</a>
+        </div>
+        <script>
+            window.onscroll = function() {
+                var navbar = document.getElementById('navbar');
+                if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
+                    navbar.style.left = '0';
+                } else {
+                    navbar.style.left = '-220px';
+                }
+            };
+        </script>
 
-    <script>
-        window.onscroll = function() {
-            var navbar = document.getElementById('navbar');
-            if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
-                navbar.style.left = '0';
-            } else {
-                navbar.style.left = '-220px';
-            }
-        };
-    </script>
-            <header>
-                <h1>Agnes Riviere</h1>
-            </header>
+        <header>
+            <h1>Agnes Riviere, Ph.D.</h1>
+            <!-- <div class="profilpic">
+                <img src="img/Agnes.jpg" alt="Photo Agnes Riviere">
+            </div> -->
+        </header>
+
+
             <section id="section1">
-                <h2 class="intro_h2">Agnes Riviere, Ph.D.</h2>
+                <h2 class="intro_param">Associate Professor in Hydrogeology at Mines Paris, PSL</h2>
                 <div class="socials_block">
                     <a href="https://www.linkedin.com/in/agnes-riviere-48676363/"><img src="img/LI.png"></a>
                     <a href="https://www.researchgate.net/profile/Agnes-Riviere"><img src="img/RG.png"></a>

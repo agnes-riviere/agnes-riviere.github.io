@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
 
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #dcdcdc;
+    scroll-behavior: smooth; /* Smooth scrolling enchor links */
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.page {
+    position: absolute;
+    width: 100%; min-height: 100%;
+    line-height: normal;
+    font-size: 18px;   
+    color: #36383d;
+}
+
 .navbar {
     position: fixed;
     left: 0px; /* Initial position outside the viewport */
@@ -26,33 +44,30 @@
     background-color: #c3c2c2;
 }
 
-html,
-body {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth; /* Smooth scrolling enchor links */
-    font-family: 'Source Sans 3', sans-serif;
+.profilpic {
+    position: absolute;
+    right: 40px;
+}
+.profilpic img{
+    display: inline-block;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-.page {
-    position: absolute;
-    width: 100%; min-height: 100%;
-    line-height: normal;
-    color: #131313;
-    background-color: #dcdcdc;
+.intro_param {
+    display: inline-block;
+    color: #b6cbce;
+    font-size: 36px;
+    width: 60%;
+    font-style: italic;
 }
+
 p{
-    font-size: 18px;   
     max-width: 1000px;
     margin: auto;
     margin-bottom: 10px;
-    color: #56585e;
-}
-
-header{
-    background-color: #dcdcdc;
-    padding: 1em;
 }
 
 header h1{
@@ -86,6 +101,13 @@ h5{
     margin: 0 auto 10px auto;
 }
 
+li h5 {
+    margin: 10px;
+}
+
+a{
+    color: #708a8f;
+}
 
 a:hover,
 a:focus,
@@ -106,19 +128,16 @@ ol {
     margin: auto;
     margin-bottom: 10px;
 }
-li{  
-    line-height: 1.5em;
+li{    
     margin: auto;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 }
 
 .socials_block {
     float: right;
     /*text-align: right; /* Aligns the content to the right within its parent */
 }
-.intro_h2 {
-    display: inline-block;
-}
+
 .socials_block img {
     width: 64px; /* Sets the width of the images to 64 pixels */
     margin-left: 10px; /* Provides spacing between the images */
