@@ -164,6 +164,11 @@ li{
 .figure_center img{
     vertical-align: middle;
 }
+
+.trioimgalery a:not(:last-child) {
+    margin-right: 40px;
+}
+
 section,
 footer {
     position: relative;
