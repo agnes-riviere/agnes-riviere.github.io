@@ -13,39 +13,80 @@
     <div class="page">
 
         <div class="container">
+        
+            <div class="menu_icon">
+                <a href="#"><svg height="32px version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" style="fill:#708a8f;"/></svg></a>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var menuIcon = document.querySelector('.menu_icon');
+                    var navbar = document.querySelector('.navbar');
+                
+                    // Add event listener to menu icon
+                    menuIcon.addEventListener('click', function() {
+                        navbar.classList.toggle('activenav');
+                    });
+                
+                    // Add event listener to navbar links
+                    var navLinks = document.querySelectorAll('.navbar a');
+                    navLinks.forEach(function(link) {
+                        link.addEventListener('click', function() {
+                            if (navbar.classList.contains('activenav')) {
+                                navbar.classList.remove('activenav');
+                            }
+                        });
+                    });
+                });
+            </script>
+            
+            <nav class="navbar" id="navbar">
 
-        <div class="navbar" id="navbar">
-            <a href="#section1">Agnes Riviere, Ph.D. </a>
-            <a href="#section2">News</a>
-            <a href="#section3">Research Projects</a>
-            <a href="#section4">Publications and Communications</a>
-            <a href="#section5">Softwares</a>
-            <a href="#section6">Equipments and field works </a>
-            <a href="#section7">Scientific responsibilities </a>
-            <a href="#section8">Supervision </a>
-            <a href="#section9">Teaching experiences </a>
-            <a href="#section10">Dissemination to broader audience</a>
-            <a href="#section11">CV</a>
-            <a href="#contacts">Contacts</a>
-        </div>
+                <!--<div class="profilpic">
+                    <img src="img/Agnes.jpg" alt="Photo Agnes Riviere">
+                </div>-->
+                <a href="#section1">Agnes Riviere, Ph.D. </a>
+                <a href="#section2">News</a>
+                <a href="#section3">Research Projects</a>
+                <a href="#section4">Publications and Communications</a>
+                <a href="#section5">Softwares</a>
+                <a href="#section6">Equipments and field works </a>
+                <a href="#section7">Scientific responsibilities </a>
+                <a href="#section8">Supervision </a>
+                <a href="#section9">Teaching experiences </a>
+                <a href="#section10">Dissemination to broader audience</a>
+                <a href="#section11">CV</a>
+                <a href="#contacts">Contacts</a>
+            </nav>
         <script>
-            window.onscroll = function() {
+            /*window.onscroll = function() { // Hide navbar
                 var navbar = document.getElementById('navbar');
                 if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
                     navbar.style.left = '0';
                 } else {
                     navbar.style.left = '-220px';
                 }
-            };
+            };*/
+
+            window.addEventListener('scroll', function() {
+                var sections = document.querySelectorAll('section');
+                var navLinks = document.querySelectorAll('nav a');
+            
+                sections.forEach(function(section, index) {
+                    var top = section.offsetTop - 100; // Adjusted offset to trigger class change
+            
+                    if (window.scrollY >= top) {
+                        navLinks.forEach(function(link) {
+                            link.classList.remove('active');
+                        });
+                        navLinks[index].classList.add('active');
+                    }
+                });
+            });
         </script>
 
         <header>
             <h1>Agnes Riviere, Ph.D.</h1>
-            <!-- <div class="profilpic">
-                <img src="img/Agnes.jpg" alt="Photo Agnes Riviere">
-            </div> -->
         </header>
-
 
             <section id="section1">
                 <h2 class="intro_param">Hydrogeologist at Mines Paris, PSL</h2>
@@ -217,33 +258,33 @@
                 <p> <strong> National Conferences:</strong> Presentations: 31
                 <h3>Publications</h3>
                 <p> N.B.: The first authors in bold are students whom I supervised. </p>
-                <ol reversed>
-                <li> <b> Cunha-Teixeira, J.</b>, Ludovic, B., Dangeard, M., Gesret, A., Hallier, A., Rivière, A., Burzawa, A., Cárdenas Chapellín, J. J., Fonda, M.,  Sanchez Gonzalez, R., Dhemaied, A., Boisson Gaboriau, J., (submitted in  2023) - Passive measurement of multi-modal surface-wave dispersion along high-speed lines using uniform linear arrays, Seismica. </li>
-                <li>Valois, R., Rivière, A., Vouillamoz, J-M. and Rau G. (2024) - Analytical Solution for Well Water
-                    Response to Earth Tides in Leaky Aquifers with Storage and Compressibility in
-                    the Aquitard, HESS <a href="https://egusphere.copernicus.org/preprints/2023/egusphere-2023-1727/"> ⟨10.5194/egusphere-2023-1727⟩</a> </li>
-                <li> Ackerer, J., Kuppel, S., Braud, I., Pasquet, S., Fovet, O. Probst, A., Pierret, M-C., Ruiz, L., Tallec, T., Lesparre, N.,
-                    Weill, S., Flechard, S., Probst, J. L., Marçais, J., Riviere, A., Habets, F., Anquetin, A., and J. Gaillardet (2023)
-                    – Exploring the Critical Zone Heterogeneity and the Hydrological Diversity Using an Integrated Ecohydrological Model in
-                    Three Contrasted Long-Term Observatories, Water Resources Research, <a
-                            href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023WR035672"> ⟨10.1029/2023WR035672⟩ </a> </li>
-                <li> Bois, P., Beisel, J.N., Cairault, A., Flipo, N., Leprince, C. and Rivière, A. , (2023) – Water temperature dynamics in a headwater forest stream: contrasting climatic, anthropic and geological conditions create thermal mosaic of aquatic habitats, PLOS one
-                    <a href="https://doi.org/10.1371/journal.pone.0281096"> ⟨10.1371/journal.pone.0281096⟩ </a>
-                </li>
-                <li> BA Mouhamadoul, M., Crave, A., Heyman, J., Rivière A., Oliver-Soulayrol Marc, Kergosien Bruno; Rolland Pascal; Petton, C., Lavenant, N., Kermarrec, J.J., Meric, F., Stube, V. (2023) – A dataset on physico-chemical hyporheic variables in the Selune River: Towards understanding the impact of dam removal on riverbed clogging processes, Data in brief
-                    <a href=" https://doi.org/10.1016/j.dib.2022.108837"> ⟨10.1016/j.dib.2022.108837⟩ </a></li>
-                <li> <b> Kiliç, D. </b>, Rvière , A., Gallois, N., Ducharne, A., Wang. S., Peylin, P.,  and Flipo, N., (2023) – Assessing water and energy fluxes in a regional hydrosystem: case study of the Seine basin. Comptes Rendus. Géoscience
-                 <a href=" https://doi.org/10.5802/crgeos.165"> ⟨10.5802/crgeos.165⟩ </a>
-                </li>
-                <li> Texier, J., Gonçalvès, J. and Rivière, A. (2022) – Numerical Assessment of Groundwater Flowpaths below a Streambed in Alluvial Plains Impacted by a Pumping Field. Water 14(7):1100
-                    <a href=" https://www.mdpi.com/2073-4441/14/7/1100"> ⟨10.3390/w14071100⟩ </a>
-                </li>
-                <li> <b> Cucchi, K. </b>, Flipo, N., Rivière, A., and Rubin, Y. (2021) – Estimating hydrothermal properties and high-frequency fluxes from multiphysics measurements in the hyporheic zone. Frontiers in Water,
-                    <a href="https://doi.org/10.3389/frwa.2021.700274"> ⟨10.3389/frwa.2021.700274⟩ </a>
-                </li>
-                <li> <b> Dangeard, M. </b>, Rivière, A., Bodet, L., Schneider, S, Guérin, R., Jougnot, D., and Maineult, A, (2021) – River Corridor Model Constrained by Time-Lapse Seismic Acquisition., Water Resources Research,
-                <a href="https://doi.org/10.1029/2020WR028911 "> ⟨10.1029/2020WR028911⟩</a>
-                </li>
+                <ol class="tightlist" reversed>
+                    <li> <b> Cunha-Teixeira, J.</b>, Ludovic, B., Dangeard, M., Gesret, A., Hallier, A., Rivière, A., Burzawa, A., Cárdenas Chapellín, J. J., Fonda, M.,  Sanchez Gonzalez, R., Dhemaied, A., Boisson Gaboriau, J., (submitted in  2023) - Passive measurement of multi-modal surface-wave dispersion along high-speed lines using uniform linear arrays, Seismica. </li>
+                    <li>Valois, R., Rivière, A., Vouillamoz, J-M. and Rau G. (2024) - Analytical Solution for Well Water
+                        Response to Earth Tides in Leaky Aquifers with Storage and Compressibility in
+                        the Aquitard, HESS <a href="https://egusphere.copernicus.org/preprints/2023/egusphere-2023-1727/"> ⟨10.5194/egusphere-2023-1727⟩</a> </li>
+                    <li> Ackerer, J., Kuppel, S., Braud, I., Pasquet, S., Fovet, O. Probst, A., Pierret, M-C., Ruiz, L., Tallec, T., Lesparre, N.,
+                        Weill, S., Flechard, S., Probst, J. L., Marçais, J., Riviere, A., Habets, F., Anquetin, A., and J. Gaillardet (2023)
+                        – Exploring the Critical Zone Heterogeneity and the Hydrological Diversity Using an Integrated Ecohydrological Model in
+                        Three Contrasted Long-Term Observatories, Water Resources Research, <a
+                                href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023WR035672"> ⟨10.1029/2023WR035672⟩ </a> </li>
+                    <li> Bois, P., Beisel, J.N., Cairault, A., Flipo, N., Leprince, C. and Rivière, A. , (2023) – Water temperature dynamics in a headwater forest stream: contrasting climatic, anthropic and geological conditions create thermal mosaic of aquatic habitats, PLOS one
+                        <a href="https://doi.org/10.1371/journal.pone.0281096"> ⟨10.1371/journal.pone.0281096⟩ </a>
+                    </li>
+                    <li> BA Mouhamadoul, M., Crave, A., Heyman, J., Rivière A., Oliver-Soulayrol Marc, Kergosien Bruno; Rolland Pascal; Petton, C., Lavenant, N., Kermarrec, J.J., Meric, F., Stube, V. (2023) – A dataset on physico-chemical hyporheic variables in the Selune River: Towards understanding the impact of dam removal on riverbed clogging processes, Data in brief
+                        <a href=" https://doi.org/10.1016/j.dib.2022.108837"> ⟨10.1016/j.dib.2022.108837⟩ </a></li>
+                    <li> <b> Kiliç, D. </b>, Rvière , A., Gallois, N., Ducharne, A., Wang. S., Peylin, P.,  and Flipo, N., (2023) – Assessing water and energy fluxes in a regional hydrosystem: case study of the Seine basin. Comptes Rendus. Géoscience
+                    <a href=" https://doi.org/10.5802/crgeos.165"> ⟨10.5802/crgeos.165⟩ </a>
+                    </li>
+                    <li> Texier, J., Gonçalvès, J. and Rivière, A. (2022) – Numerical Assessment of Groundwater Flowpaths below a Streambed in Alluvial Plains Impacted by a Pumping Field. Water 14(7):1100
+                        <a href=" https://www.mdpi.com/2073-4441/14/7/1100"> ⟨10.3390/w14071100⟩ </a>
+                    </li>
+                    <li> <b> Cucchi, K. </b>, Flipo, N., Rivière, A., and Rubin, Y. (2021) – Estimating hydrothermal properties and high-frequency fluxes from multiphysics measurements in the hyporheic zone. Frontiers in Water,
+                        <a href="https://doi.org/10.3389/frwa.2021.700274"> ⟨10.3389/frwa.2021.700274⟩ </a>
+                    </li>
+                    <li> <b> Dangeard, M. </b>, Rivière, A., Bodet, L., Schneider, S, Guérin, R., Jougnot, D., and Maineult, A, (2021) – River Corridor Model Constrained by Time-Lapse Seismic Acquisition., Water Resources Research,
+                    <a href="https://doi.org/10.1029/2020WR028911 "> ⟨10.1029/2020WR028911⟩</a>
+                    </li>
                     <li> Ottle, C., Bernus, A., Verbeke, T., Petrus, K., Yin, Z. Biancamaria, S., Jost, A., Desroches, D., Pottier, C., Perrin, C., de Lavenne, A., Flipo, N., Rivière, A., (2021) – Characterization of SWOT Water Level Errors on Seine Reservoirs and La Bassée Gravel Pits: Impacts on Water Surface Energy Budget Modeling. Remote Sensing, MDPI, 2020, 12 (18), pp.2911.
                         <a href="https://www.mdpi.com/2072-4292/12/18/2911"> ⟨10.3390/RS12182911⟩ </a>.
                     </li>
@@ -286,7 +327,7 @@
                 </ol>
                 <h3>Reports</h3>
                 <p> N.B.: The first authors in bold are students whom I supervised. </p>
-                <ol reversed>
+                <ol class="tightlist" reversed>
                     <li>	Rivière, A., (2023) Transferts de chaleur et températures des eaux du bassin de la Seine	<a href="https://piren-seine.fr/rapports/rapport_de_synthese/rapports_de_phase_8/transferts_de_chaleur_et_temperatures_des_eaux_du"> ⟨PIREN2023e⟩ </a>.</li>
                     <li>	Rivière. A, Thomas. W., Ung. P., (2023) - Évolution des températures de la Seine jusqu’en 2022. Dans Rivière. A. (ed), Transferts de chaleur et températures des eaux, PIREN-Seine, Rapport de synthèse phase VIII, Volume 4, pp. 7-43	<a href="https://piren-seine.fr/rapports/rapport_de_synthese/rapports_de_phase_8/transferts_de_chaleur_et_temperatures_des_eaux_du"> ⟨PiREN2023d⟩ </a>.</li>
                     <li>	Rivière. A, Ladet. D., Thomas. W, Le Breton, G, Ducharne. A., Oudin. L., (2023) – Projections des températures de l'eau de la Seine à Paris à l'horizon 2100. Dans Rivière. A. (ed), Transferts de chaleur et températures des eaux, PIREN-Seine, Rapport de synthèse phase VIII, Volume 4, 2023, pp. 97-120	<a href="https://piren-seine.fr/rapports/rapport_de_synthese/rapports_de_phase_8/transferts_de_chaleur_et_temperatures_des_eaux_du"> ⟨PIREN2023c⟩ </a>.</li>
@@ -331,7 +372,7 @@
                 </ol>
                 <h3> Conferences </h3>
                 <h4> International Oral communications </h4>
-                <ol reversed>
+                <ol class="tightlist" reversed>
                 <li>Ackerer, J., Kuppel, S., Braud, I., Pasquet, S., Fovet, O., Probst, A., Pierret, M. C., Ruiz, L., Tallec, T., Lesparre, N., Weill, S., Flechard, C., Probst, J. L., Marçais, J., Riviere, A., Habets, F., Anquetin, S., and Gaillardet, J. (2024)- Exploring the landscape heterogeneity and the hydrological diversity in three contrasted observatories of the French critical zone research infrastructure OZCAR, EGU General Assembly 2024, Vienna, Austria, 14–19 Apr 2024, <a href="https://doi.org/10.5194/egusphere-egu24-419">⟨EGU2024c⟩ </a>  </li>
                 <li> <b>Ramon Sanchez Gonzalez </b>  Bodet, L.,   Gesret, A. and Rivière, A. (2024) - Bayesian sensitivity analysis of seismic data to van Genuchten parameters in unsaturated and unconsolidated soils . EGU General Assembly 2024, Vienna, Austria, 14–19 Apr 2024 <a href="https://meetingorganizer.copernicus.org/EGU24/EGU24-12001.html"> ⟨EGU2024b⟩ </a></li>
                 <li> <b>Cunha Teixeira </b>, J., Bodet, L., Rivière, A., Dangeard, M., Hallier, A., Gesret, A., Dhemaied, A. and Boisson Gaboriau, J., (2024) – Water table height maps prediction from passive surface-wave dispersion using deep learning.  EGU General Assembly 2024, Vienna, Austria, 14–19 Apr 2024 <a href="https://meetingorganizer.copernicus.org/EGU24/EGU24-8304.html"> ⟨EGU2024a⟩ </a></li>
@@ -362,7 +403,7 @@
                 <li> Rivière, A., Gonçalvès, J., Jost A. and Font, M. (2010) – Experimental and numerical modeling studies of pore water pressure variations in Subpermafrost groundwater., Third European Conference on Permafrost, Longyearbyen, Svalbard, June 13-17. 	<a href="https://hal.science/hal-01396673/document"> ⟨EUCOP3⟩ </a>.</li>
                 </ol>
                 <h4> Posters </h4>
-                <ol reversed>
+                <ol class="tightlist" reversed>
                     <li> Rivière, A., Dangeard, M., Bodet, L., Sanchez Gonzalez, R., and Gesret, A. (2024) - Assessing Surface Water and Groundwater Interactions Using Long-Term Hydrological and Time-Lapse Seismic Data in the Orgeval Critical Zone Observatory, EGU General Assembly 2024, Vienna, Austria, 14–19 Apr 2024, EGU24-13147, <a href="https://doi.org/10.5194/egusphere-egu24-13147"> ⟨EGU2024d⟩ </a>  </li>
                  <li>  Henine, H., Tournebize, J., Chaumont, C., Blanchouin, A., Rivière, A., and Clément, R. (2024) - Characterization of deep infiltrations in subsurface drained agricultural system, EGU General Assembly 2024, Vienna, Austria, 14–19 Apr 2024, EGU24-20229, <a href="https://doi.org/10.5194/egusphere-egu24-20229">⟨EGU2024d⟩ </a>. </li>
                 <li>	Rivière, A, Bodet, L., Dangeard, M., Sanchez, R., and Gesret A. (2023) – How Groundwater Models Can Benefit from Near-Surface Seismic Data? Tereno OZCAR, Bonn (Allemagne), 25-29 sept	<a href="https://hal.univ-lyon2.fr/ENSMP_SHR/hal-04245901v1"> ⟨Tererno-ozcar2023⟩ </a>.</li>
@@ -387,7 +428,7 @@
                 </ol>
 
                 <h4> Nationale conferences</h4>
-                <ol reversed>
+                <ol class="tightlist" reversed>
                     <li>	<strong>Cunha Teixeira, J.</strong>, Bodet, L., Hallier, A., Burzawa, A., Dangeard, M., Fonda, M., Cárdenas Chapellín, J. J., Sanchez Gonzalez, R., Gesret, A., Rivière, A., Dhemaied, A., Boisson Gaboriau, J., 2023. Le monitoring sismique pour la détermination de propriétés mécaniques de la proche surface long de lignes à grande vitesse, GEOFCAN 2023, Strasbourg.					</li>
                     <li>	<strong>Kiliç D.</strong>, Rivière A, Flipo N, Ducharne A, Gallois N, Wang S, Peylin P. (2022) - Assessing water and energy fluxes in a regional hydrosystem: case study of the Seine basin. JMSC 2022, 6-7 octobre 2022, Grenoble, France. ORAL.	<a href="https://hal.science/hal-04065513"> ⟨JMSC2022⟩ </a>.</li>
                     <li>    Rivière A, Kiliç D, Flipo N, Ducharne A, Gallois N, Wang S, Peylin P. (2022) – Evaluation des flux d'eau et de chaleur sur l'ensemble de l'hydrosystème Seine. Colloque PIREN-Seine, 6-7 octobre 2022, Paris, France. </li>
@@ -421,7 +462,7 @@
 
                 </ol>
                 <h4> Invited seminars </h4>
-                <ol reversed>
+                <ol class="tightlist" reversed>
                     <li>    Rivière et al., (2023)  – Comment les modèles hydrogéologiques peuvent bénéficier des données hydrogéophysiques, séminaire <a href="https://hplus.ore.fr/en/"> H+</a> (Network of hydrogeological research sites), 30 june </li>
                     <li>    Rivière A. et al., (2022) – Couplage d'approches hydrogéophysiques avec des données géologiques pour la compréhension des flux d’eau, Workshop RGF, Bassin parisien, Atelier modélisation, 16 september 2022. </li>
                     <li>    Rivière A. et al., (2022) – Approches hydrogéophysiques pour la compréhension des échanges nappe-rivière, Institut Terre Environnement Strasbourg, EOST-ENGEES, 17 march 2022 </li>
@@ -432,21 +473,18 @@
                     <li>    Rivière, A., Gonçalvès, J., Jost, A., and Font, M., (2010) – Numerical modeling of pore water pressure variations in Subpermafrost groundwater subjected to freeze/thaw cycles., Seminar on Hydrogeology between Sisyphe Team and the Editorial Board of Hydrogeology Journal, UMR 7619 SISYPHE, December 3 </li>
                 </ol>
                 <h3> Sessions and workshops organized </h3>
-                <ol reversed>
-                    <li>  <strong>  2024:</strong>   Observing and understanding current and past subsurface water and energy transfers in a changing environment</li>
-                    <p> Conveners : Victor Bense (Wageningen University and Research, Department of Environmental Sciences, Netherlands), Agnès Rivière (Mines Paris - PSL), Wei-Li Hong (Stockholm University, Department of Geological Sciences, Sweden), Barret Kurylyk (Dalhousie University, Civil and Resource Engineering, Canada), Anne Jost (Sorbonne University, Paris France), Susanne A. Benz (Karlruhe Instiute for Technology, Department of Civil Engineering, Geo and Environmental Sciences, Institute of Photogrammetry and Remote Sensing, Germany), Ariel Thomas (University of Malta, Marine Geology and Seafloor Surveying, Malta)</p>
+                <ol class="tightlist" reversed>
+                    <li><strong>  2024:</strong> Observing and understanding current and past subsurface water and energy transfers in a changing environment<br>
+                    Conveners : Victor Bense (Wageningen University and Research, Department of Environmental Sciences, Netherlands), Agnès Rivière (Mines Paris - PSL), Wei-Li Hong (Stockholm University, Department of Geological Sciences, Sweden), Barret Kurylyk (Dalhousie University, Civil and Resource Engineering, Canada), Anne Jost (Sorbonne University, Paris France), Susanne A. Benz (Karlruhe Instiute for Technology, Department of Civil Engineering, Geo and Environmental Sciences, Institute of Photogrammetry and Remote Sensing, Germany), Ariel Thomas (University of Malta, Marine Geology and Seafloor Surveying, Malta)</li>
 
-                    <li>  <strong>  2023:</strong>   Extremes and the critical zone: Water and matter transport during floods and droughts, intermittent streams and processes at the groundwater-surface water interface, Second OZCAR TERENO International Conference Bonn, Germany</li>
-                    <p> Conveners : Andreas Musolff (UFZ, Leipzig), Agnès Rivière (Mines Paris - PSL, Paris), Caroline le Bouteiller (ETNA, Grenoble), Claudia Schütze (UFZ, Leipzig) </p>
+                    <li><strong>  2023:</strong> Extremes and the critical zone: Water and matter transport during floods and droughts, intermittent streams and processes at the groundwater-surface water interface, Second OZCAR TERENO International Conference Bonn, Germany<br>
+                    Conveners : Andreas Musolff (UFZ, Leipzig), Agnès Rivière (Mines Paris - PSL, Paris), Caroline le Bouteiller (ETNA, Grenoble), Claudia Schütze (UFZ, Leipzig)</li>
 
+                    <li><strong>  2021:</strong> Surface - groundwater interactions, First OZCAR TERENO International Conference Strasbourg, France<br>
+                    Conveners : Jan Flekenstein (UFZ, Leipzig), Agnès Rivière (Mines Paris - PSL)</li>
 
-                    <li>  <strong>  2021:</strong>   Surface - groundwater interactions, First OZCAR TERENO International Conference Strasbourg, France</li>
-                    <p> Conveners : Jan Flekenstein (UFZ, Leipzig), Agnès Rivière (Mines Paris - PSL) </p>
-
-
-                    <li>  <strong> 2016:</strong> Advances, Breakthroughs, and Challenges in Spatio-Temporal Hydrogeologic Sciences, AGU San Francisco, USA</li>
-               <p> Conveners: Kenneth C Carroll ( New Mexico State University Main Campus, USA), Jordi Batlle-Aguilar (University of Kansas, USA), Agnès Rivière (Mines Paris - PSL, France) and Phoolendra K Mishra (California State University Fullerton, USA)
-
+                    <li><strong> 2016:</strong> Advances, Breakthroughs, and Challenges in Spatio-Temporal Hydrogeologic Sciences, AGU San Francisco, USA
+                    Conveners: Kenneth C Carroll ( New Mexico State University Main Campus, USA), Jordi Batlle-Aguilar (University of Kansas, USA), Agnès Rivière (Mines Paris - PSL, France) and Phoolendra K Mishra (California State University Fullerton, USA)</li>
                 </ol>
 
             </section>
