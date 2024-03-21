@@ -187,7 +187,11 @@ li{
 .vidfullframe video{
     width: 100%;
 }
-
+figcaption {
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
 .trioimgalery a:not(:last-child) {
     margin-right: 40px;
 }
