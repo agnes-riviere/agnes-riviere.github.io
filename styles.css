@@ -56,9 +56,6 @@ body {
     display: none;
 }
 
-.profilpic {
-    
-}
 .profilpic img{
     display: inline-block;  
     height: 180px;
@@ -95,7 +92,7 @@ header h1 a{
 h2,
 h3,
 h4{
-    
+
     color: #8aa9ae;
     line-height: 1em;
     font-weight: normal;
